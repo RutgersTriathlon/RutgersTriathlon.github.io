@@ -1,3 +1,6 @@
+/************
+    PARALLAX
+*************/
 .divider {
     height:50px;
 }
@@ -33,4 +36,39 @@ section {
 
 #bannerSubText {
     color: #607D8B;
+}
+
+/************
+    NAVBAR
+*************/
+
+.navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  height: 80px;
+  padding: 10px;
+}
+
+.navbar-brand img {
+  display: inline-block;
+  width: 120px;
+  margin-top: 3px;
+}
+
+.navbar-nav li a {
+  color: #fff !important;
+  font-size: 1.25em;
+  line-height: 50px;
+  -o-transition: .1s ease-in-out;
+  -ms-transition: .1s ease-in-out;
+  -moz-transition: .1s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.navbar-nav li a:hover, .current-page {
+  box-shadow: inset 0px 5px 0px 0px;
 }
