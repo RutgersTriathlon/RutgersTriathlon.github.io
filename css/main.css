@@ -27,6 +27,10 @@ section {
   color:#efefef;
 }
 
-p.header {
-    color:#37474F;
+.p p-header {
+    color: #9E9E9E;
+}
+
+.h1 h1-header {
+    color: #607D8B;
 }
