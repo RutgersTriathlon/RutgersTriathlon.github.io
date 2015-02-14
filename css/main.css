@@ -27,10 +27,10 @@ section {
   color:#efefef;
 }
 
-.p {
+#bannerText {
     color: #9E9E9E;
 }
 
-.h1 {
+#bannerSubText {
     color: #607D8B;
 }
