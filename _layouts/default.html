@@ -17,23 +17,16 @@
     <![endif]-->
     <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
-
   <body>
-
+  <div class="container">
+    {% include navbar.html %}
+  </div>
+  <div class="jumbotron">
     <div class="container">
-      {% include navbar.html %}
-
-      <section class="content">
-        <div class="hero-unit">
-        {{ content }}
-        </div>
-
-      </section>
-
-      <hr>
-      {% include training.html %}
-      
+      <img src="img/rutgersTriathlonBanner.jpg">
     </div>
+  </div>
+
 
 	<!-- Java -->
     <script src="/js/jquery.js"></script>
@@ -49,10 +42,6 @@
     <script src="/js/bootstrap-collapse.js"></script>
     <script src="/js/bootstrap-carousel.js"></script>
     <script src="/js/bootstrap-typeahead.js"></script>
-
-
-
-
 
   </body>
 </html>
