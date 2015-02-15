@@ -38,6 +38,7 @@
       firebaseReference.child("Monday").on("value", function(snapshot) {
         mondayPracticeData = snapshot.val();
         $('#mondayPractice').append(mondayPracticeData);
+        alert(mondayPracticeData);
       });
       firebaseReference.child("Tuesday").on("value", function(snapshot) {
         tuesdayPracticeData = snapshot.val();
