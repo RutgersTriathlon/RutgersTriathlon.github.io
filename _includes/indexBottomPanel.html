@@ -40,6 +40,6 @@
       /** VAR collection and view population from firebase **/
       firebaseReference.on("value", function(snapshot) {
         practiceData = snapshot.val();
-        $('#PracticeList').append("<li class=\"list-group-item\">"+practiceData.Tuesday+"</li>");
+        alert(practiceData.Tuesday)
       });
   </script>
