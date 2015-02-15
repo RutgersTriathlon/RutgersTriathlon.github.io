@@ -24,7 +24,7 @@
   <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
   <script type="text/javascript">
         /** VAR Initialization **/
-      var listItemPrefix = "class=\"list-group-item\"",listItemPostFix="</li>"
+      var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
 
       var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
 
@@ -33,7 +33,18 @@
         practiceData = snapshot.val();
         alert(practiceData.Monday); 
         // alert(practiceData.Tuesday);  
-        document.getElementById("PracticeList").innerHTML = listItemPrefix.concat(practiceData.Tuesday,listItemPostFix);
+        document.getElementById("PracticeList").innerHTML = concatinatePracticeSchedule(practiceData);
+
       });
+
+      function concatinatePracticeSchedule(practiceData){
+        return listItemPrefix.concat(practiceData.Monday,listItemPostFix,
+          listItemPrefix,practiceData.Tuesday,listItemPostFix,
+          listItemPrefix,practiceData.Wednesday,listItemPostFix,
+          listItemPrefix,practiceData.Thursday,listItemPostFix,
+          listItemPrefix,practiceData.Friday,listItemPostFix,
+          listItemPrefix,practiceData.Saturday,listItemPostFix,
+          listItemPrefix,practiceData.Sunday,listItemPostFix);          
+      }
   </script>
 </html>
