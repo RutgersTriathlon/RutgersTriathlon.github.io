@@ -99,7 +99,7 @@ section {
   box-shadow: inset 0px 5px 0px 0px;
 }
 
-.navbar .brand { 
+.navbar-brand { 
     max-height: 40px;
     max-width: 30%; 
     overflow: visible;
