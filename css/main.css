@@ -69,11 +69,11 @@ section {
   padding: 10px;
 }
 
-.navbar-brand img {
+/*.navbar-brand img {
   display: inline-block;
   width: 120px;
   margin-top: 3px;
-}
+}*/
 
 .navbar-nav li a {
   color: #fff !important;
@@ -97,10 +97,4 @@ section {
 
 .navbar-nav li a:hover, .current-page {
   box-shadow: inset 0px 5px 0px 0px;
-}
-
-.navbar-brand { 
-    max-height: 10px;
-    padding-top: 0;
-    padding-bottom: 0; 
 }
