@@ -69,11 +69,10 @@ section {
   padding: 10px;
 }
 
-/*.navbar-brand img {
+.navbar-brand img {
   display: inline-block;
-  width: 120px;
-  margin-top: 3px;
-}*/
+  margin-bottom: 3px;
+}
 
 .navbar-nav li a {
   color: #fff !important;
