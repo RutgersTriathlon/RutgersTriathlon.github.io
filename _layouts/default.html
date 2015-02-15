@@ -31,9 +31,7 @@
         practiceData = snapshot.val();
         alert(practiceData.Monday); 
         // alert(practiceData.Tuesday);  
-        document.getElementById("Tuesday").innerHTML = practiceData.Tuesday;
+        document.getElementById("PracticeList").innerHTML = "<li>"+practiceData.Tuesday+"</li>";
       });
-
-
   </script>
 </html>
