@@ -23,7 +23,7 @@ h1 {
 }
 
 section {
-    height:400px;
+    height:650px;
     padding-top:5px;
     padding-bottom:50px;
     overflow:auto;
@@ -84,6 +84,11 @@ section {
   -moz-transition: .1s ease-in-out;
   -webkit-transition: .1s ease-in-out;
   transition: .1s ease-in-out;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
 }
 
 .navbar-nav li a:hover, .current-page {
