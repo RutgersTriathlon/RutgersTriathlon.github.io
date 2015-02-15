@@ -30,7 +30,7 @@
       firebaseReference.on("value", function(snapshot) {
         practiceData = snapshot.val();
         alert(practiceData.Monday); 
-        alert(practiceData.Tuesday);  
+        // alert(practiceData.Tuesday);  
         document.getElementById("Tuesday").innerHTML = practiceData.Tuesday;
       });
 
