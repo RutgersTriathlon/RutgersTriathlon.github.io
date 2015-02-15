@@ -39,7 +39,9 @@
       });
       firebaseReference.child("Tuesday").on("value", function(snapshot) {
         tuesdayPracticeData = snapshot.val();
-        $("#tuesdayPractice").val(tuesdayPracticeData);
+        $("#tuesdayPractice").append(tuesdayPracticeData);
+        alert(tuesdayPracticeData);
+
       });
       firebaseReference.child("Wednesday").on("value", function(snapshot) {
         wednesdayPracticeData = snapshot.val();
