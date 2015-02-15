@@ -12,7 +12,7 @@ function retrieveAndPopulatePracticeData(){
 	/** VAR collection and view population from firebase **/
 	firebaseReference.child("Monday").on("value", function(snapshot) {
 		mondayPracticeData = snapshot.val();
-		$('mondayPractice').val(mondayPracticeData);
+		$('#mondayPractice').append(mondayPracticeData);
 	});
 	firebaseReference.child("Tuesday").on("value", function(snapshot) {
 		tuesdayPracticeData = snapshot.val();
@@ -38,6 +38,11 @@ function retrieveAndPopulatePracticeData(){
 		sundayPracticeData = snapshot.val();
 		$('sundayPractice').val(sundayPracticeData);
 	});
+
+	$(document).ready(){
+		$('#tuesdayPractice').append(tuesdayPracticeData);
+	}
+
 
 	/* NOTE : if the practice data never returns then the data will remain blank */
 }
