@@ -21,10 +21,6 @@
   </body>
 
   <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
-  <script type="text/javascript">
-    var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
-    firebaseReference.child("Monday").on("value", function(snapshot) {
-        alert(snapshot.val());
-    });
-  </script>
+  <script src="js/firebase.js"></script>
+  <script type="text/javascript">retrieveAndPopulatePracticeData();</script>
 </html>
