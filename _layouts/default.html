@@ -34,14 +34,14 @@
         document.getElementById("PracticeList").innerHTML = concatinatePracticeSchedule(practiceData);
       });
 
-      function concatinatePracticeSchedule(practiceData){
+      function concatinatePracticeSchedule(practiwceData){
         return listItemPrefix.concat("<b>Monday: </b>",practiceData.Monday,listItemPostFix,
-          "<b>Tuesday: </b>",listItemPrefix,practiceData.Tuesday,listItemPostFix,
-          "<b>Wednesday: </b>",listItemPrefix,practiceData.Wednesday,listItemPostFix,
-          "<b>Thursday: </b>",listItemPrefix,practiceData.Thursday,listItemPostFix,
-          "<b>Friday: </b>",listItemPrefix,practiceData.Friday,listItemPostFix,
-          "<b>Saturday: </b>",listItemPrefix,practiceData.Saturday,listItemPostFix,
-          "<b>Sunday: </b>",listItemPrefix,practiceData.Sunday,listItemPostFix);          
+          listItemPrefix,"<b>Tuesday: </b>",practiceData.Tuesday,listItemPostFix,
+          listItemPrefix,"<b>Wednesday: </b>",practiceData.Wednesday,listItemPostFix,
+          listItemPrefix,"<b>Thursday: </b>",practiceData.Thursday,listItemPostFix,
+          listItemPrefix,"<b>Friday: </b>",practiceData.Friday,listItemPostFix,
+          listItemPrefix,"<b>Saturday: </b>",practiceData.Saturday,listItemPostFix,
+          listItemPrefix,"<b>Sunday: </b>",practiceData.Sunday,listItemPostFix);          
       }
   </script>
 </html>
