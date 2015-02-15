@@ -23,8 +23,8 @@ h1 {
 }
 
 section {
-    height:500px;
-    padding-top:10px;
+    height:400px;
+    padding-top:5px;
     padding-bottom:50px;
     overflow:auto;
 }
