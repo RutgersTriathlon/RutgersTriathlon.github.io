@@ -37,9 +37,9 @@
       /** VAR collection and view population from firebase **/
       var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
       firebaseReference.child("Monday").on("value", function(snapshot) {
-        mondayPracticeData = snapshot.val();
-        $('#mondayPractice').append(mondayPracticeData);
-        alert(mondayPracticeData);
+        // mondayPracticeData = snapshot.val();
+        // $('#mondayPractice').append(mondayPracticeData);
+        alert(snapshot.val());
       });
       // firebaseReference.child("Tuesday").on("value", function(snapshot) {
       //   tuesdayPracticeData = snapshot.val();
