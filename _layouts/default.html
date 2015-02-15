@@ -36,6 +36,8 @@
       /** VAR collection and view population from firebase **/
       firebaseReference.child("Monday").on("value", function(snapshot) {
         mondayPracticeData = snapshot.val();
+        alert(mondayPracticeData);
+
       });
       firebaseReference.child("Tuesday").on("value", function(snapshot) {
         tuesdayPracticeData = snapshot.val();
