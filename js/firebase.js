@@ -43,3 +43,27 @@ function retrieveAndPopulateOfficerData(){
        return officerListForDisplay;
     }
 }
+
+function retrieveAndPopulateRaceData(){
+     /** VAR Initialization **/
+    var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
+    var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Races");
+
+      /** VAR collection and view population from firebase **/
+    firebaseReference.on("value", function(snapshot) {
+        raceListData = snapshot.val();
+        document.getElementById("RaceList").innerHTML = concatinateOfficerList(raceListData);
+    });
+
+    function concatinateRaceList(raceListData){
+        var officerListForDisplay = "";
+       for(race in raceListData){
+        var raceListInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Races/'+race);
+        raceListInformation.on('value', function(snapshotinner) {
+            raceInformation = snapshotinner.val().Information;
+        });
+        raceListForDisplay = officerListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
+       }
+       return raceListForDisplay;
+    }
+}
