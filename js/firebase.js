@@ -34,7 +34,11 @@ function retrieveAndPopulateOfficerData(){
     function concatinateOfficerList(officerData){
         var officerListForDisplay = "";
        for(officer in officerData){
-        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer," - ",officer.Position,listItemPostFix);
+        var officerInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Officers/'+officer);
+        dataRef.on('value', function(snapshotinner) {
+            officerPosition = snapshotinner.val().Position;
+        });
+        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer," - ",officerPosition,listItemPostFix);
        }
        return officerListForDisplay;
     }
