@@ -52,7 +52,7 @@ function retrieveAndPopulateRaceData(){
       /** VAR collection and view population from firebase **/
     firebaseReference.on("value", function(snapshot) {
         raceListData = snapshot.val();
-        document.getElementById("RaceList").innerHTML = concatinateOfficerList(raceListData);
+        document.getElementById("RaceList").innerHTML = concatinateRaceList(raceListData);
     });
 
     function concatinateRaceList(raceListData){
