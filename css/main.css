@@ -2,18 +2,19 @@
     GENERAL
 *************/
 
-/*@font-face {
-    font-family: 'din-regular'; a name to be used later
-    src: url('/fonts/din-regular.ttf'); /*URL to font*/
+@font-face {
+    font-family: 'din-regular';
+    src: url('/fonts/din-regular.ttf') format('truetype');
+}
 
 h1 {
   font-size: 6.5em;
   font-weight: 350;
 }
-/*
+
 body {
-  font-family: din-regular;
-}*/
+  font-family: din-regular,sans-serif,sans-serif;
+}
 
 /************
     Font
