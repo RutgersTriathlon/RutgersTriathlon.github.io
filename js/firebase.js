@@ -38,7 +38,7 @@ function retrieveAndPopulateOfficerData(){
         officerInformation.on('value', function(snapshotinner) {
             officerPosition = snapshotinner.val().Position;
         });
-        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer," - ",officerPosition,listItemPostFix);
+        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,"<b>",officer,"</b>"," - ",officerPosition,listItemPostFix);
        }
        return officerListForDisplay;
     }
