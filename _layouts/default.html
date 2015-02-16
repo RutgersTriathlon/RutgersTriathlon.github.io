@@ -22,26 +22,8 @@
 
   <!-- <script src="js/jquery-2.1.3.min.js"/> -->
   <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
   <script type="text/javascript">
-        /** VAR Initialization **/
-      var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
-
-      var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
-
-      /** VAR collection and view population from firebase **/
-      firebaseReference.on("value", function(snapshot) {
-        practiceData = snapshot.val();
-        document.getElementById("PracticeList").innerHTML = concatinatePracticeSchedule(practiceData);
-      });
-
-      function concatinatePracticeSchedule(practiwceData){
-        return listItemPrefix.concat("<b>Monday: </b>",practiceData.Monday,listItemPostFix,
-          listItemPrefix,"<b>Tuesday: </b>",practiceData.Tuesday,listItemPostFix,
-          listItemPrefix,"<b>Wednesday: </b>",practiceData.Wednesday,listItemPostFix,
-          listItemPrefix,"<b>Thursday: </b>",practiceData.Thursday,listItemPostFix,
-          listItemPrefix,"<b>Friday: </b>",practiceData.Friday,listItemPostFix,
-          listItemPrefix,"<b>Saturday: </b>",practiceData.Saturday,listItemPostFix,
-          listItemPrefix,"<b>Sunday: </b>",practiceData.Sunday,listItemPostFix);          
-      }
+   retrieveAndPopulatePracticeData();
   </script>
 </html>

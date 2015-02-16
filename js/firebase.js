@@ -1,43 +1,22 @@
 function retrieveAndPopulatePracticeData(){
-	/** VAR Initialization **/
-	var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
-	var mondayPracticeData = "";
-	var tuesdayPracticeData = "";
-	var wednesdayPracticeData = "";
-	var thursdayPracticeData = "";
-	var fridayPracticeData = "";
-	var saturdayPracticeData = "";
-	var sundayPracticeData = "";
+     /** VAR Initialization **/
+	var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
 
-	/** VAR collection and view population from firebase **/
-	firebaseReference.child("Monday").on("value", function(snapshot) {
-		mondayPracticeData = snapshot.val();
-		alert(mondayPracticeData);
-	});
-	firebaseReference.child("Tuesday").on("value", function(snapshot) {
-		tuesdayPracticeData = snapshot.val();
-		$('tuesdayPractice').val(tuesdayPracticeData);
-	});
-	firebaseReference.child("Wednesday").on("value", function(snapshot) {
-		wednesdayPracticeData = snapshot.val();
-		$('wednesdayPractice').val(wednesdayPracticeData);
-	});
-	firebaseReference.child("Thursday").on("value", function(snapshot) {
-		thursdayPracticeData = snapshot.val();
-		$('thursdayPractice').val(thursdayPracticeData);
-	});
-	firebaseReference.child("Friday").on("value", function(snapshot) {
-		fridayPracticeData = snapshot.val();
-		$('fridayPractice').val(fridayPracticeData);
-	});
-	firebaseReference.child("Saturday").on("value", function(snapshot) {
-		saturdayPracticeData = snapshot.val();
-		$('saturdayPractice').val(saturdayPracticeData);
-	});
-	firebaseReference.child("Sunday").on("value", function(snapshot) {
-		sundayPracticeData = snapshot.val();
-		$('sundayPractice').val(sundayPracticeData);
+    var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Practices");
+
+      /** VAR collection and view population from firebase **/
+	firebaseReference.on("value", function(snapshot) {
+     	practiceData = snapshot.val();
+     	document.getElementById("PracticeList").innerHTML = concatinatePracticeSchedule(practiceData);
 	});
 
-	/* NOTE : if the practice data never returns then the data will remain blank */
+    function concatinatePracticeSchedule(practiwceData){
+       return listItemPrefix.concat("<b>Monday: </b>",practiceData.Monday,listItemPostFix,
+        listItemPrefix,"<b>Tuesday: </b>",practiceData.Tuesday,listItemPostFix,
+        listItemPrefix,"<b>Wednesday: </b>",practiceData.Wednesday,listItemPostFix,
+        listItemPrefix,"<b>Thursday: </b>",practiceData.Thursday,listItemPostFix,
+        listItemPrefix,"<b>Friday: </b>",practiceData.Friday,listItemPostFix,
+        listItemPrefix,"<b>Saturday: </b>",practiceData.Saturday,listItemPostFix,
+    	listItemPrefix,"<b>Sunday: </b>",practiceData.Sunday,listItemPostFix);          
+    }
 }
