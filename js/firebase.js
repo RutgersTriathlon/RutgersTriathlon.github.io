@@ -62,7 +62,7 @@ function retrieveAndPopulateRaceData(){
             raceListInformation.on('value', function(snapshotinner) {
                 raceInformation = snapshotinner.val().Information;
             });
-            raceListForDisplay = officerListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
+            raceListForDisplay = raceListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
        }
        return raceListForDisplay;
     }
