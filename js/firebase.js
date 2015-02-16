@@ -56,13 +56,13 @@ function retrieveAndPopulateRaceData(){
     });
 
     function concatinateRaceList(raceListData){
-        var officerListForDisplay = "";
-       for(race in raceListData){
-        var raceListInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Races/'+race);
-        raceListInformation.on('value', function(snapshotinner) {
-            raceInformation = snapshotinner.val().Information;
-        });
-        raceListForDisplay = officerListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
+        var raceListForDisplay = "";
+        for(race in raceListData){
+            var raceListInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Races/'+race);
+            raceListInformation.on('value', function(snapshotinner) {
+                raceInformation = snapshotinner.val().Information;
+            });
+            raceListForDisplay = officerListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
        }
        return raceListForDisplay;
     }
