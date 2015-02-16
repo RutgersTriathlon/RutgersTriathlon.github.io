@@ -35,7 +35,7 @@ function retrieveAndPopulateOfficerData(){
         var officerListForDisplay = "";
        for(officer in officerData){
         var officerInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Officers/'+officer);
-        dataRef.on('value', function(snapshotinner) {
+        officerInformation.on('value', function(snapshotinner) {
             officerPosition = snapshotinner.val().Position;
         });
         officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer," - ",officerPosition,listItemPostFix);
