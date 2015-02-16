@@ -34,7 +34,7 @@ function retrieveAndPopulateOfficerData(){
     function concatinateOfficerList(officerData){
         var officerListForDisplay = "";
        for(officer in officerData){
-        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer,listItemPostFix);
+        officerListForDisplay = officerListForDisplay.concat(listItemPrefix,officer," - ",officer.Position,listItemPostFix);
        }
        return officerListForDisplay;
     }
