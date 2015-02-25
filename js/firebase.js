@@ -86,17 +86,17 @@ function retrieveAndPopulateMemberData(){
             var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+member);
             memberInformation.on('value', function(snapshotinner) {
                 memberPhoto = snapshotinner.val().photo;
-                memberGraduation = snapshotinner.val().Grad;
-                memberFact = snapshotinner.val().Fact;
-                memberBio = snapshotinner.val().Bio;
+                // memberGraduation = snapshotinner.val().Grad;
+                // memberFact = snapshotinner.val().Fact;
+                // memberBio = snapshotinner.val().Bio;
             });
             memberInformationForDisplay = memberInformationForDisplay.concat(memberCardPrefix,
                 memberPhotoPrefix,
                 memberPhoto,
-                memberPhotoPostfix,
-                memberGraduation,
-                memberBio,
-                memberFact);
+                memberPhotoPostfix,memberCardPostfix);
+                // memberGraduation,
+                // memberBio,
+                // memberFact);
         }
     }
 }
