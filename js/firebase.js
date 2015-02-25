@@ -67,3 +67,36 @@ function retrieveAndPopulateRaceData(){
        return raceListForDisplay;
     }
 }
+
+function retrieveAndPopulateMemberData(){
+    var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Members");
+
+    /** VAR collection and view population from firebase **/
+    firebaseReference.on("value", function(snapshot) {
+        memberData = snapshot.val();
+        document.getElementById("MemberList").innerHTML = concatinateMemberList(memberData);
+    });
+
+    function concatinateMemberList(memberData){
+        var memberInformationForDisplay = "";
+        var memberCardPrefix = "<div class=\"well\">", memberCardPostfix = "</div>",
+            memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"/>";
+
+        for(member in memberData){
+            var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+member);
+            memberInformation.on('value', function(snapshotinner) {
+                memberPhoto = snapshotinner.val().photo;
+                memberGraduation = snapshotinner.val().Grad;
+                memberFact = snapshotinner.val().Fact;
+                memberBio = snapshotinner.val().Bio;
+            });
+            memberInformationForDisplay = memberInformationForDisplay.concat(memberCardPrefix,
+                memberPhotoPrefix,
+                memberPhoto,
+                memberPhotoPostfix,
+                memberGraduation
+                memberBio,
+                memberFact);
+        }
+    }
+}
