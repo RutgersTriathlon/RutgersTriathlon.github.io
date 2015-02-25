@@ -94,7 +94,7 @@ function retrieveAndPopulateMemberData(){
                 memberPhotoPrefix,
                 memberPhoto,
                 memberPhotoPostfix,
-                memberGraduation
+                memberGraduation,
                 memberBio,
                 memberFact);
         }
