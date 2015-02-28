@@ -99,6 +99,6 @@ function concatinateMemberList(memberData){
             memberBio,
             memberFact,
             memberCardPostfix);
-            return memberInformationForDisplay;
         }
+        return memberInformationForDisplay;
     }
