@@ -85,7 +85,7 @@ function concatinateMemberList(memberData){
         memberTitlePrefix = "<h3>",memberTitlePostfix="</h3>",
         memberGraduationPrefix = "<h4>",memberGraduationPostfix="</h4>",
         memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"  class=\"img-responsive\">",
-        memberBioPrefix = "<div class=\"well\"", memberBioPostfix = "</div>",
+        memberBioPrefix = "<div class=\"well\">", memberBioPostfix = "</div>",
         memberRowPrefix="<div class=\"row\">",memberRowPostfix="</div>",
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
 
