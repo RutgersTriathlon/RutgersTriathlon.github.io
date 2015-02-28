@@ -83,7 +83,8 @@ function concatinateMemberList(memberData){
     var memberCardPrefix = "<div class=\"card\">", memberCardPostfix = "</div>",
         memberContentPrefix = "<div class=\"content\">",memberContentPostfix="</div>",
         memberTitlePrefix = "<div class=\"title\">",memberTitlePostfix="</div>"
-        memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"/>";
+        memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"/>",
+        newMemberSpacing = "</br></br>";
 
     for(member in memberData){
         var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+member);
@@ -104,7 +105,8 @@ function concatinateMemberList(memberData){
             memberFact,
             "</div>",
             memberContentPostfix,
-            memberCardPostfix);
+            memberCardPostfix,
+            newMemberSpacing);
         }
         return memberInformationForDisplay;
     }
