@@ -80,9 +80,9 @@ function retrieveAndPopulateMemberData(){
 
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
-    var memberCardPrefix = "<div class=\"dialog center-block top-buffer\">", memberCardPostfix = "</div>",
-        memberContentPrefix = "<div class=\"content\">",memberContentPostfix="</div>",
-        memberTitlePrefix = "<h3>",memberTitlePostfix="</h3>",
+    var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",
+        memberTitlePrefix = "<div class=\"panel-heading\">",memberTitlePostfix="</div>",
+        memberInformationPrefix = " <div class=\"panel-body\">", memberInformationPostfix = "</div>"
         memberGraduationPrefix = "<h4>",memberGraduationPostfix="</h4>",
         memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"  class=\"img-responsive\">",
         memberBioPrefix = "<p>", memberBioPostfix = "</p>",
@@ -100,7 +100,7 @@ function concatinateMemberList(memberData){
         memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
-            memberContentPrefix,
+            memberInformationPrefix,
             memberPhotoPrefix,
             memberPhoto,
             memberPhotoPostfix,
@@ -113,8 +113,8 @@ function concatinateMemberList(memberData){
             memberBioPrefix,
             memberBio,
             memberBioPostfix,
-            memberContentPostfix,
             memberCardPostfix,
+            memberInformationPostfix,
             memberColPostfix,
             memberRowPostfix);
         }
