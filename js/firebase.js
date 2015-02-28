@@ -80,7 +80,9 @@ function retrieveAndPopulateMemberData(){
 
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
-    var memberCardPrefix = "<div class=\"well\">", memberCardPostfix = "</div>",
+    var memberCardPrefix = "<div class=\"card\">", memberCardPostfix = "</div>",
+        memberContentPrefix = "<div class=\"content\">",memberContentPostfix="</div>",
+        memberTitlePrefix = "<div class=\"title\">",memberTitlePostfix="</div>"
         memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"/>";
 
     for(member in memberData){
@@ -92,12 +94,16 @@ function concatinateMemberList(memberData){
             memberBio = snapshotinner.val().Bio;
         });
         memberInformationForDisplay = memberInformationForDisplay.concat(memberCardPrefix,
-            memberPhotoPrefix,
-            memberPhoto,
-            memberPhotoPostfix,
+            memberContentPrefix,
+            memberTitlePrefix,
+            member,
+            memberTitlePostfix,
+            "<div>",
             memberGraduation,
             memberBio,
             memberFact,
+            "</div>",
+            memberContentPostfix,
             memberCardPostfix);
         }
         return memberInformationForDisplay;
