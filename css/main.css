@@ -73,7 +73,7 @@ section {
     .card, .dialog {
       position: relative;
       display: inline-block;
-      width: 600px;
+      width: 85%;
       height: 440px;
       vertical-align: top;
       background-color: #fff;
