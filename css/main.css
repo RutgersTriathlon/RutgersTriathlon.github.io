@@ -99,6 +99,10 @@ section {
       float: right;
     }
 
+    .center {
+      text-align: center;
+    }
+
 /************
     NAVBAR
 *************/
