@@ -1,0 +1,40 @@
+#Content Providers
+
+###Introduction
+
+- Create a URI, then you can simply call delete
+- Glorified URI matcher
+
+###Why this approach?
+
+- Restructuring the db will break the client if the client depends on a certain structure
+- Hiccup
+	- More restful
+	- UI and persistence can evolve at the same time
+
+###Use Cases
+
+- Prototype Apps
+	- Start with in memory models and then switch over
+- Medium Sized Apps
+	- Parallelize work in the UI and the backend
+- Platform Apps
+	- Cross versioning
+
+#Thoughts on Two ORMs
+
+- Cupboard
+	- Pros : wrapper around SQLite, POJOs, Converters, Migrations
+	- Cons : Batch Support , No Relationships , Repo activity
+
+- Realm
+	- Pros : Clean builder-type API, Cross platform
+	- Cons : API broken, getter and setters required , Performance is bad, no content provider support
+
+#Color Correction OpenGL on Android
+- Apply processing to each individual pixel, pixels are not dependant on each other
+
+###How do you do this on Android?
+- Apply a colorFilter : Costly, due to each pixel is perform sequentially
+- Apply a RenderScript : Push the bitmap from the CPU to the GPU, costly if doing video
+- Open GL ES : Decoder can code directly to the GPU from the CPU is faster
