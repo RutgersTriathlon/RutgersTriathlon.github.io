@@ -95,7 +95,7 @@ function clearNavBarClasses(){
 }
 
 function updateNavbarToMembersPage(){
-    var membersNavBarItem = document.getElementById("membersNavBarItem"),
+    var membersNavBarItem = document.getElementById("membersNavBarItem");
     clearNavBarClasses();
 
     membersNavBarItem.className = "active";
