@@ -16,6 +16,15 @@ h1 {
 }
 
 /************
+    Images
+*************/
+
+.member-image{
+  max-width: 140px;
+  max-height: 140px;
+}
+
+/************
     PARALLAX
 *************/
 .divider {
