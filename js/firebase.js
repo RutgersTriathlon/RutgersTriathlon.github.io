@@ -78,6 +78,29 @@ function retrieveAndPopulateMemberData(){
     });
   }
 
+function clearNavBarClasses(){
+    var homeNavBarItem = document.getElementById("homeNavBarItem"),
+        joinNavBarItem = document.getElementById("joinNavBarItem"),
+        sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
+        membersNavBarItem = document.getElementById("membersNavBarItem"),
+        newsNavBarItem = document.getElementById("newsNavBarItem"),
+        contactNavBarItem = document.getElementById("contactNavBarItem");
+
+        homeNavBarItem.className = "";
+        joinNavBarItem.className = "";
+        sponsorsNavBarItem.className = "";
+        membersNavBarItem.className = "";
+        newsNavBarItem.className = "";
+        contactNavBarItem.className = "";
+}
+
+function updateNavbarToMembersPage(){
+    var membersNavBarItem = document.getElementById("membersNavBarItem"),
+    clearNavBarClasses();
+
+    membersNavBarItem.className = "active";
+}
+
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
     var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",
