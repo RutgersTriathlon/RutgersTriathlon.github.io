@@ -20,8 +20,10 @@ h1 {
 *************/
 
 .member-image{
-  max-width: 140px;
-  max-height: 140px;
+  max-width: 280px;
+  max-height: 280px;
+  padding-left: 10px;
+  padding-right: 8px;
 }
 
 /************
