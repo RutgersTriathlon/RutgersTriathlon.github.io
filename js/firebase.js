@@ -131,6 +131,8 @@ function concatinateMemberList(memberData){
             memberPhoto,
             memberPhotoPostfix,
             memberGraduationPrefix,
+            member,
+            " - ",
             memberGraduation,
             memberGraduationPostfix,
             memberBioPrefix,
