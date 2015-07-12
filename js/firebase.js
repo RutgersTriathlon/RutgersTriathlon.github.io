@@ -140,14 +140,10 @@ function concatinateMemberList(memberData){
         console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
             memberInfoSnapshot = snapshot.val();
-            console.log("Member Information " + memberInfoSnapshot);
         });
 
         for(member in memberInfoSnapshot){
-            console.log("member " + member);
-        }
-
-        memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
+            memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
@@ -159,6 +155,7 @@ function concatinateMemberList(memberData){
             memberCardPostfix,
             memberColPostfix,
             memberRowPostfix);
-        console.log(memberInformationForDisplay);
+        }
+        // console.log(memberInformationForDisplay);
         return memberInformationForDisplay;
     }
