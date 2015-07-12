@@ -103,7 +103,7 @@ function clearNavBarClasses(){
     // var homeNavBarItem = document.getElementById("homeNavBarItem"),
     var joinNavBarItem = document.getElementById("joinNavBarItem"),
         // sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
-        membersNavBarItem = document.getElementById("membersNavBarItem"),
+        membersNavBarItem = document.getElementById("membersNavBarItem");
         // newsNavBarItem = document.getElementById("newsNavBarItem"),
         // contactNavBarItem = document.getElementById("contactNavBarItem");
 
