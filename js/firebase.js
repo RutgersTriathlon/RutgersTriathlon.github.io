@@ -74,7 +74,6 @@ function retrieveAndPopulateMemberData(){
     /** VAR collection and view population from firebase **/
     firebaseReference.on("value", function(snapshot) {
         memberData = snapshot.val();
-        console.log(memberData);
         document.getElementById("MemberList").innerHTML = createMemberClassData(memberData);
     });
 }
@@ -88,7 +87,6 @@ function createMemberClassData(memberClassData){
         returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
     }
 
-    console.log(returnedClassMemberData);
     return returnedClassMemberData;
 }
 
@@ -97,7 +95,6 @@ function createMemberClass(memberClass){
     var classNamePrefix = "<h3>",
     classNamePostFix = "</h3>",
     returnedClassData = "";
-    console.log("createMemberClass " + memberClass);
     returnedClassData = returnedClassData.concat(classNamePrefix,memberClass,classNamePostFix,concatinateMemberList(memberClass));
     return returnedClassData;
 }
@@ -142,9 +139,13 @@ function concatinateMemberList(memberData){
 
         console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
-            memberName = snapshot.val();
-            console.log("Member Information " + memberName);
+            memberInfoSnapshot = snapshot.val();
+            console.log("Member Information " + memberInfoSnapshot);
         });
+
+        for(member in memberInfoSnapshot){
+            console.log("member " + member);
+        }
 
         memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
