@@ -137,19 +137,16 @@ function concatinateMemberList(memberData){
         console.log(memberData);
 
     for(member in memberData){
-        // var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
-        // memberInformation.on('value', function(snapshotinner) {
-        //     memberPhoto = snapshotinner.val().photo;
-        //     memberGraduation = snapshotinner.val().Grad;
-        //     memberFact = snapshotinner.val().Fact;
-        //     memberBio = snapshotinner.val().Bio;
-        // });
+        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
+        memberInformation.on('value', function(snapshot) {
+            memberName = snapshot.val();
+        });
         memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
             memberTitleAndGraduationPrefix,
-            member,
+            memberName,
             memberTitleGraduationDash,
             memberTitleAndGraduationPostfix,
             memberInformationPostfix,
