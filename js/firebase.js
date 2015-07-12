@@ -105,14 +105,14 @@ function clearNavBarClasses(){
         // sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
         membersNavBarItem = document.getElementById("membersNavBarItem"),
         // newsNavBarItem = document.getElementById("newsNavBarItem"),
-        contactNavBarItem = document.getElementById("contactNavBarItem");
+        // contactNavBarItem = document.getElementById("contactNavBarItem");
 
         // homeNavBarItem.className = "";
         joinNavBarItem.className = "";
         // sponsorsNavBarItem.className = "";
         membersNavBarItem.className = "";
         // newsNavBarItem.className = "";
-        contactNavBarItem.className = "";
+        // contactNavBarItem.className = "";
 }
 
 function updateNavbarToMembersPage(){
