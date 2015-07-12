@@ -136,13 +136,11 @@ function concatinateMemberList(memberData){
 
         console.log(memberData);
 
-    for(member in memberData){
-        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
-        console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
+        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
+        console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
             memberName = snapshot.val();
-        });
-        memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
+            memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
@@ -154,7 +152,7 @@ function concatinateMemberList(memberData){
             memberCardPostfix,
             memberColPostfix,
             memberRowPostfix);
-        }
+        });
         console.log(memberInformationForDisplay);
         return memberInformationForDisplay;
     }
