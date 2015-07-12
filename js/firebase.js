@@ -131,7 +131,8 @@ function concatinateMemberList(memberData){
         memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"  class=\"img-responsive img-rounded member-image pull-left\">",
         memberBioPrefix = "<p>", memberBioPostfix = "</p>",
         memberRowPrefix="<div class=\"row\">",memberRowPostfix="</div>",
-        memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
+        memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>",
+        memberMajorPrefix = "<h4>",memberMajorPostfix = "</h4>";
 
         var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
 
@@ -147,7 +148,7 @@ function concatinateMemberList(memberData){
         for(member in memberInfoSnapshot){
             var individualMemberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
             var memberMajor = "";
-            
+
             individualMemberInformation.on('value', function(snapshot) {
                 memberMajor = snapshot.val();
             });
@@ -158,9 +159,11 @@ function concatinateMemberList(memberData){
             memberInformationPrefix,
             memberTitleAndGraduationPrefix,
             member,
-            memberTitleGraduationDash,
-            memberMajor,
             memberTitleAndGraduationPostfix,
+            memberTitleGraduationDash,
+            memberMajorPrefix,
+            memberMajor,
+            memberMajorPostfix
             memberInformationPostfix,
             memberCardPostfix,
             memberColPostfix,
