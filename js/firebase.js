@@ -138,6 +138,7 @@ function concatinateMemberList(memberData){
 
     for(member in memberData){
         var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
+        console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
         memberInformation.on('value', function(snapshot) {
             memberName = snapshot.val();
         });
