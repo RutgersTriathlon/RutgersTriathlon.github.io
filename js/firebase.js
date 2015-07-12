@@ -92,8 +92,8 @@ function createMemberClassData(memberClassData){
 
 //Creates the member list for each class
 function createMemberClass(memberClass){
-    var classNamePrefix = "<h3>",
-    classNamePostFix = "</h3>",
+    var classNamePrefix = "<div class=\"col-md-4 col-md-offset-2\"><h3>Class of ",
+    classNamePostFix = "</h3></div>",
     returnedClassData = "";
     returnedClassData = returnedClassData.concat(classNamePrefix,memberClass,classNamePostFix,concatinateMemberList(memberClass));
     return returnedClassData;
