@@ -82,7 +82,7 @@ function retrieveAndPopulateMemberData(){
 function createMemberClassData(memberClassData){
     
     var returnedClassMemberData = "";
-    
+
     for(classData in memberClassData){
         returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
     }
@@ -155,5 +155,6 @@ function concatinateMemberList(memberData){
             memberColPostfix,
             memberRowPostfix);
         }
+        console.log(memberInformationForDisplay);
         return memberInformationForDisplay;
     }
