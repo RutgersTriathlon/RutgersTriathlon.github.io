@@ -148,7 +148,7 @@ function concatinateMemberList(memberData){
             memberCardPrefix,
             memberInformationPrefix,
             memberTitleAndGraduationPrefix,
-            memberName,
+            member,
             memberTitleGraduationDash,
             memberTitleAndGraduationPostfix,
             memberInformationPostfix,
