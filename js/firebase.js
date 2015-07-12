@@ -81,9 +81,9 @@ function retrieveAndPopulateMemberData(){
     });
 }
 
-function createMemberClass(var memberClassData){
+function createMemberClass(memberClassData){
     var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
-    
+
     for(classData in memberClassData){
         console.log(memberClassData);
     }
