@@ -74,7 +74,7 @@ function retrieveAndPopulateMemberData(){
     /** VAR collection and view population from firebase **/
     firebaseReference.on("value", function(snapshot) {
         memberData = snapshot.val();
-        // console.log(memberData);
+        console.log(memberData);
         document.getElementById("MemberList").innerHTML = createMemberClassData(memberData);
     });
 }
@@ -82,6 +82,7 @@ function retrieveAndPopulateMemberData(){
 function createMemberClassData(memberClassData){
     
     var returnedClassMemberData = "";
+    console.log("createClassData " + memberClassData);
 
     for(classData in memberClassData){
         returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
@@ -96,6 +97,7 @@ function createMemberClass(memberClass){
     var classNamePrefix = "<h3>",
     classNamePostFix = "</h3>",
     returnedClassData = "";
+    console.log("createMemberClass " + memberClass);
     returnedClassData = returnedClassData.concat(classNamePrefix,memberClass,classNamePostFix,concatinateMemberList(memberClass));
     return returnedClassData;
 }
@@ -134,13 +136,17 @@ function concatinateMemberList(memberData){
         memberRowPrefix="<div class=\"row\">",memberRowPostfix="</div>",
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
 
-        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
+        // var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
+
         var memberName = "";
+
         console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
             memberName = snapshot.val();
             console.log(memberName);
-            memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
+        });
+
+        memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
@@ -152,7 +158,6 @@ function concatinateMemberList(memberData){
             memberCardPostfix,
             memberColPostfix,
             memberRowPostfix);
-        });
         console.log(memberInformationForDisplay);
         return memberInformationForDisplay;
     }
