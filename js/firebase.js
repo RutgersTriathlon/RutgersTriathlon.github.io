@@ -82,12 +82,13 @@ function retrieveAndPopulateMemberData(){
 function createMemberClassData(memberClassData){
     
     var returnedClassMemberData = "";
+    
     for(classData in memberClassData){
         returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
     }
 
-    console.log(returnedClassData);
-    return returnedClassData;
+    console.log(returnedClassMemberData);
+    return returnedClassMemberData;
 }
 
 //Creates the member list for each class
