@@ -163,7 +163,7 @@ function concatinateMemberList(memberData){
             memberTitleGraduationDash,
             memberMajorPrefix,
             memberMajor,
-            memberMajorPostfix
+            memberMajorPostfix,
             memberInformationPostfix,
             memberCardPostfix,
             memberColPostfix,
