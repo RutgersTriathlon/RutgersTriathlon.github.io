@@ -74,10 +74,20 @@ function retrieveAndPopulateMemberData(){
     /** VAR collection and view population from firebase **/
     firebaseReference.on("value", function(snapshot) {
         memberData = snapshot.val();
-        console.log(memberData);
-        // document.getElementById("MemberList").innerHTML = concatinateMemberList(memberData);
+        // console.log(memberData);
+        document.getElementById("MemberList").innerHTML = concatinateMemberList(memberData);
+        createMemberClass(memberData);
+
     });
-  }
+}
+
+function createMemberClass(var memberClassData){
+    var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
+    
+    for(classData in memberClassData){
+        console.log(memberClassData);
+    }
+}
 
 function clearNavBarClasses(){
     var homeNavBarItem = document.getElementById("homeNavBarItem"),
@@ -101,18 +111,6 @@ function updateNavbarToMembersPage(){
 
     membersNavBarItem.className = "active";
 }
-
-
-// function createMemberClass(var memberClassData){
-//     var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
-
-//     for(classData in memberClassData){
-//         var memberClassInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+classData.val());
-//         memberClassInformation.on('value',function(snapShot){
-//             concatinateMemberList(snapshot,classHtmlElement);
-//         });
-//     }
-// }
 
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
