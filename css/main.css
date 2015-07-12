@@ -27,6 +27,21 @@ h1 {
 }
 
 /************
+    MEMBERS
+*************/
+
+.member-class{
+  padding-bottom: 20px;
+}
+
+.member-image{
+  max-width: 280px;
+  max-height: 280px;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+
+/************
     PARALLAX
 *************/
 .divider {
