@@ -142,7 +142,16 @@ function concatinateMemberList(memberData){
             memberInfoSnapshot = snapshot.val();
         });
 
+
+
         for(member in memberInfoSnapshot){
+            var individualMemberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
+            var memberMajor = "";
+            
+            individualMemberInformation.on('value', function(snapshot) {
+                memberMajor = snapshot.val();
+            });
+
             memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
@@ -150,6 +159,7 @@ function concatinateMemberList(memberData){
             memberTitleAndGraduationPrefix,
             member,
             memberTitleGraduationDash,
+            memberMajor,
             memberTitleAndGraduationPostfix,
             memberInformationPostfix,
             memberCardPostfix,
