@@ -134,12 +134,11 @@ function concatinateMemberList(memberData){
         memberRowPrefix="<div class=\"row\">",memberRowPostfix="</div>",
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
 
-        console.log(memberData);
-
         var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
             memberName = snapshot.val();
+            console.log(memberName);
             memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
