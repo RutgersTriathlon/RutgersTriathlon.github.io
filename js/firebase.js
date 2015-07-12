@@ -100,18 +100,18 @@ function createMemberClass(memberClass){
 }
 
 function clearNavBarClasses(){
-    var homeNavBarItem = document.getElementById("homeNavBarItem"),
-        joinNavBarItem = document.getElementById("joinNavBarItem"),
-        sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
+    // var homeNavBarItem = document.getElementById("homeNavBarItem"),
+    var joinNavBarItem = document.getElementById("joinNavBarItem"),
+        // sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
         membersNavBarItem = document.getElementById("membersNavBarItem"),
-        newsNavBarItem = document.getElementById("newsNavBarItem"),
+        // newsNavBarItem = document.getElementById("newsNavBarItem"),
         contactNavBarItem = document.getElementById("contactNavBarItem");
 
-        homeNavBarItem.className = "";
+        // homeNavBarItem.className = "";
         joinNavBarItem.className = "";
-        sponsorsNavBarItem.className = "";
+        // sponsorsNavBarItem.className = "";
         membersNavBarItem.className = "";
-        newsNavBarItem.className = "";
+        // newsNavBarItem.className = "";
         contactNavBarItem.className = "";
 }
 
