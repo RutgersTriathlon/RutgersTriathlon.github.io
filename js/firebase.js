@@ -75,7 +75,7 @@ function retrieveAndPopulateMemberData(){
     firebaseReference.on("value", function(snapshot) {
         memberData = snapshot.val();
         // console.log(memberData);
-        document.getElementById("MemberList").innerHTML = createMemberClass(memberData);
+        document.getElementById("MemberList").innerHTML = createMemberClassData(memberData);
     });
 }
 
@@ -92,10 +92,11 @@ function createMemberClassData(memberClassData){
 
 //Creates the member list for each class
 function createMemberClass(memberClass){
-    var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
-    var returnedClassData = "";
-    var classInformation = = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberClass);
+    var classNamePrefix = "<h3>",
+    classNamePostFix = "</h3>",
+    returnedClassData = "";
     returnedClassData = returnedClassData.concat(classNamePrefix,memberClass,classNamePostFix,concatinateMemberList(memberClass));
+    return returnedClassData;
 }
 
 function clearNavBarClasses(){
@@ -133,28 +134,21 @@ function concatinateMemberList(memberData){
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
 
     for(member in memberData){
-        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
-        memberInformation.on('value', function(snapshotinner) {
-            memberPhoto = snapshotinner.val().photo;
-            memberGraduation = snapshotinner.val().Grad;
-            memberFact = snapshotinner.val().Fact;
-            memberBio = snapshotinner.val().Bio;
-        });
+        // var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
+        // memberInformation.on('value', function(snapshotinner) {
+        //     memberPhoto = snapshotinner.val().photo;
+        //     memberGraduation = snapshotinner.val().Grad;
+        //     memberFact = snapshotinner.val().Fact;
+        //     memberBio = snapshotinner.val().Bio;
+        // });
         memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
-            memberPhotoPrefix,
-            memberPhoto,
-            memberPhotoPostfix,
             memberTitleAndGraduationPrefix,
             member,
             memberTitleGraduationDash,
-            memberGraduation,
             memberTitleAndGraduationPostfix,
-            memberBioPrefix,
-            memberBio,
-            memberBioPostfix,
             memberInformationPostfix,
             memberCardPostfix,
             memberColPostfix,
