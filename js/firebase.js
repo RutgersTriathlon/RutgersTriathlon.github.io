@@ -75,18 +75,27 @@ function retrieveAndPopulateMemberData(){
     firebaseReference.on("value", function(snapshot) {
         memberData = snapshot.val();
         // console.log(memberData);
-        document.getElementById("MemberList").innerHTML = concatinateMemberList(memberData);
-        createMemberClass(memberData);
-
+        document.getElementById("MemberList").innerHTML = createMemberClass(memberData);
     });
 }
 
-function createMemberClass(memberClassData){
-    var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
-
+function createMemberClassData(memberClassData){
+    
+    var returnedClassMemberData = "";
     for(classData in memberClassData){
-        console.log(memberClassData.name());
+        returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
     }
+
+    console.log(returnedClassData);
+    return returnedClassData;
+}
+
+//Creates the member list for each class
+function createMemberClass(memberClass){
+    var classNamePrefix = "<h3>", classNamePostFix = "</h3>";
+    var returnedClassData = "";
+    var classInformation = = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberClass);
+    returnedClassData = returnedClassData.concat(classNamePrefix,memberClass,classNamePostFix,concatinateMemberList(memberClass));
 }
 
 function clearNavBarClasses(){
@@ -124,7 +133,7 @@ function concatinateMemberList(memberData){
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>";
 
     for(member in memberData){
-        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+member);
+        var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData + '/' + member);
         memberInformation.on('value', function(snapshotinner) {
             memberPhoto = snapshotinner.val().photo;
             memberGraduation = snapshotinner.val().Grad;
