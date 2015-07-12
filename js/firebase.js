@@ -143,7 +143,7 @@ function concatinateMemberList(memberData){
         console.log('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
         memberInformation.on('value', function(snapshot) {
             memberName = snapshot.val();
-            console.log(memberName);
+            console.log("Member Information " + memberName);
         });
 
         memberInformationForDisplay = memberInformationForDisplay.concat(memberRowPrefix,
