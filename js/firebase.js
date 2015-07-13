@@ -100,19 +100,10 @@ function createMemberClass(memberClass){
 }
 
 function clearNavBarClasses(){
-    // var homeNavBarItem = document.getElementById("homeNavBarItem"),
-    var joinNavBarItem = document.getElementById("joinNavBarItem"),
-        // sponsorsNavBarItem = document.getElementById("sponsorsNavBarItem"),
-        membersNavBarItem = document.getElementById("membersNavBarItem");
-        // newsNavBarItem = document.getElementById("newsNavBarItem"),
-        // contactNavBarItem = document.getElementById("contactNavBarItem");
-
-        // homeNavBarItem.className = "";
-        joinNavBarItem.className = "";
-        // sponsorsNavBarItem.className = "";
-        membersNavBarItem.className = "";
-        // newsNavBarItem.className = "";
-        // contactNavBarItem.className = "";
+    var joinNavBarItem = document.getElementById("joinNavBarItem");
+    var membersNavBarItem = document.getElementById("membersNavBarItem");
+    joinNavBarItem.className = "";
+    membersNavBarItem.className = "";
 }
 
 function updateNavbarToMembersPage(){
