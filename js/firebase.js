@@ -157,7 +157,7 @@ function concatinateMemberList(memberData){
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
-            "<h4>"
+            "<h4>",
             memberTitleAndGraduationPrefix,
             member,
             memberTitleAndGraduationPostfix,
