@@ -127,12 +127,12 @@ function concatinateMemberList(memberData){
     var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",
         memberTitlePrefix = "<div class=\"panel-heading\">",memberTitlePostfix="</div>",
         memberInformationPrefix = " <div class=\"panel-body\">", memberInformationPostfix = "</div>"
-        memberTitleAndGraduationPrefix = "<h4><b>",memberTitleAndGraduationPostfix="</b></h4>",memberTitleGraduationDash= " - ",
+        memberTitleAndGraduationPrefix = "<b>",memberTitleAndGraduationPostfix="</b>",memberTitleGraduationDash= " - ",
         memberPhotoPrefix = "<img src=\"", memberPhotoPostfix = "\"  class=\"img-responsive img-rounded member-image pull-left\">",
         memberBioPrefix = "<p>", memberBioPostfix = "</p>",
         memberRowPrefix="<div class=\"row\">",memberRowPostfix="</div>",
         memberColPrefix="<div class=\"col-md-6 col-md-offset-3\">",memberColPostfix="</div>",
-        memberMajorPrefix = "<h4>",memberMajorPostfix = "</h4>";
+        memberMajorPrefix = "",memberMajorPostfix = "";
 
         var memberInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Members/'+memberData);
 
@@ -157,6 +157,7 @@ function concatinateMemberList(memberData){
             memberColPrefix,
             memberCardPrefix,
             memberInformationPrefix,
+            "<h4>"
             memberTitleAndGraduationPrefix,
             member,
             memberTitleAndGraduationPostfix,
@@ -164,6 +165,7 @@ function concatinateMemberList(memberData){
             memberMajorPrefix,
             memberMajor,
             memberMajorPostfix,
+            "</h4>",
             memberInformationPostfix,
             memberCardPostfix,
             memberColPostfix,
