@@ -100,9 +100,9 @@ function createMemberClass(memberClass){
 }
 
 function clearNavBarClasses(){
-    // var joinNavBarItem = document.getElementById("joinNavBarItem");
+    var joinNavBarItem = document.getElementById("joinNavBarItem");
     var membersNavBarItem = document.getElementById("membersNavBarItem");
-    // joinNavBarItem.className = "";
+    joinNavBarItem.className = "";
     membersNavBarItem.className = "";
 }
 
