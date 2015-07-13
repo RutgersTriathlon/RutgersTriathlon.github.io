@@ -59,8 +59,9 @@ function retrieveAndPopulateRaceData(){
         var raceListForDisplay = "";
         for(race in raceListData){
             var raceListInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Races/'+race);
-            raceListInformation.on('value', function(snapshotinner) {
-                raceInformation = snapshotinner.val().Information;
+            raceListInformation.orderByValue().on('value', function(snapshotinner) {
+                raceInformation = snapshotinner.val();
+                console.log(raceInformation);
             });
             raceListForDisplay = raceListForDisplay.concat(listItemPrefix,"<b>",race,"</b>"," - ",raceInformation,listItemPostFix);
        }
