@@ -102,8 +102,10 @@ function createMemberClass(memberClass){
 function clearNavBarClasses(){
     var joinNavBarItem = document.getElementById("joinNavBarItem");
     var membersNavBarItem = document.getElementById("membersNavBarItem");
+    var aboutNavBarItem = document.getElementById("aboutNavBarItem");
     joinNavBarItem.className = "";
     membersNavBarItem.className = "";
+    aboutNavBarItem.className = "";
 }
 
 function updateNavbarToMembersPage(){
@@ -118,6 +120,13 @@ function updateNavbarToJoinPage(){
     clearNavBarClasses();
 
     joinNavBarItem.className = "active";
+}
+
+function updateNavbarToAboutPage(){
+    var aboutNavBarItem = document.getElementById("aboutNavBarItem");
+    clearNavBarClasses();
+
+    aboutNavBarItem.className = "active";
 }
 
 function concatinateMemberList(memberData){
