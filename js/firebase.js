@@ -114,10 +114,10 @@ function updateNavbarToMembersPage(){
 }
 
 function updateNavbarToJoinPage(){
-    var membersNavBarItem = document.getElementById("joinNavBarItem");
+    var joinNavBarItem = document.getElementById("joinNavBarItem");
     clearNavBarClasses();
 
-    membersNavBarItem.className = "active";
+    joinNavBarItem.className = "active";
 }
 
 function concatinateMemberList(memberData){
