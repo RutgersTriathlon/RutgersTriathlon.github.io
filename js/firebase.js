@@ -50,7 +50,7 @@ function retrieveAndPopulateRaceData(){
     var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Races");
 
       /** VAR collection and view population from firebase **/
-    firebaseReference.on("value", function(snapshot) {
+    firebaseReference.orderByValue().on("value", function(snapshot) {
         raceListData = snapshot.val();
         document.getElementById("RaceList").innerHTML = concatinateRaceList(raceListData);
     });
