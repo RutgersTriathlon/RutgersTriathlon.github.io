@@ -122,6 +122,13 @@ function updateNavbarToMembersPage(){
     membersNavBarItem.className = "active";
 }
 
+function updateNavbarToJoinPage(){
+    var membersNavBarItem = document.getElementById("joinNavBarItem");
+    clearNavBarClasses();
+
+    membersNavBarItem.className = "active";
+}
+
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
     var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",
