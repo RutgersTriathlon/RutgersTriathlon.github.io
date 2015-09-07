@@ -45,7 +45,6 @@ h1 {
   CAROUSEL
 ************/
 .carousel{
-    background: url('/img/placeholder.png') no-repeat center center fixed;
     margin-top: 5px;
 }
 .carousel .item img{
