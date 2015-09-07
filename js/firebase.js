@@ -71,7 +71,7 @@ function retrieveAndPopulateOfficerDataForOfficersPage(){
 }
 
 function createOfficerLayout(officerName, officerPosition, officerProfileImageLink,officerAboutMe){
-    var cardPrefix = "<div class=\"panel panel-default\">", cardPostfix = "</div>",
+    var cardPrefix = "<div class=\"panel panel-danger\">", cardPostfix = "</div>",
                     cardHeadingPrefix ="<div class=\"panel-heading\">", cardHeadingPostfix = "</div>",
                     officerNameAndPositionPrefix = "<h3>", officerNameAndPositionPostfix = "</h3>",
                     officerBodyInformationPrefix = "<div class=\"panel-body\"> <div class=\"media\">", officerBodyInformationPostfix = "</div></div>",
