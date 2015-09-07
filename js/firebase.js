@@ -66,31 +66,22 @@ function retrieveAndPopulateOfficerDataForOfficersPage(){
             officerListData = officerListData.concat(createOfficerLayout(officer,officerPosition,officerProfileImageLink,officerAboutMe));
         });
        }
-       console.log("OfficerData " + officerListData);
        return officerListData;
     }
 }
 
 function createOfficerLayout(officerName, officerPosition, officerProfileImageLink,officerAboutMe){
     var cardPrefix = "<div class=\"panel panel-default\">", cardPostfix = "</div>",
-        titlePrefix = "<div class=\"panel-heading\">",titlePostfix="</div>",
-        informationPrefix = " <div class=\"panel-body\">", informationPostfix = "</div>"
-        titleAndGraduationPrefix = "<b>",titleAndGraduationPostfix="</b>",titleGraduationDash= " - ",
-        photoPrefix = "<img src=\"", photoPostfix = "\"  class=\"img-responsive img-rounded member-image pull-left\">",
-        bioPrefix = "<p>", bioPostfix = "</p>",
-        rowPrefix="<div class=\"row\">",rowPostfix="</div>",
-        colPrefix="<div class=\"col-md-6 col-md-offset-3\">",colPostfix="</div>",
-        majorPrefix = "",majorPostfix = "";
+                    cardHeadingPrefix ="<div class=\"panel-heading\">", cardHeadingPostfix = "</div>",
+                    officerNameAndPositionPrefix = "<h3 class=\"panel-title\">", officerNameAndPositionPostfix = "</h3>",
+                    officerBodyInformationPrefix = "<div class=\"panel-body\"> <div class=\"media\">", officerBodyInformationPostfix = "</div></div>",
+                    officerProfileImagePrefix = "<div class=\"media-left\"><img class=\"media-object\" src=\"",officerProfileImagePostfix = "\"/></div>",
+                    officerVariousInformationPrefix = "<div class=\"media-body\">", officerVariousInformationPostfix = "</div>";
 
-    var officerDataForDisplay = cardPrefix.concat(rowPrefix,colPrefix,
-                                                titlePrefix,officerName,titleGraduationDash,officerPosition,titlePostfix,
-                                                rowPostfix,rowPrefix,
-                                                photoPrefix,officerProfileImageLink,photoPostfix,
-                                                rowPostfix,rowPrefix,
-                                                bioPrefix,officerAboutMe,bioPostfix,rowPostfix,colPostfix,cardPostfix);
-
-    console.log("Created officer " + officerDataForDisplay);
-    return officerDataForDisplay;
+    return cardPrefix.concat(cardHeadingPrefix,officerNameAndPositionPrefix,officerName," - ",officerPosition,officerNameAndPositionPostfix,cardHeadingPostfix,
+                             officerBodyInformationPrefix,officerProfileImagePrefix,officerProfileImageLink,officerProfileImagePostfix,
+                             officerVariousInformationPrefix,officerAboutMe,officerVariousInformationPostfix,
+                             officerBodyInformationPostfix,cardPostfix);
 }
 
 function retrieveAndPopulateRaceData(){

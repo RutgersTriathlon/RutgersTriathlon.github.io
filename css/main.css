@@ -26,8 +26,9 @@ h1 {
 .member-image{
   max-width: 280px;
   max-height: 280px;
-  padding-left: 10px;
+  padding-left: 8px;
   padding-right: 8px;
+  float:left;
 }
 
 /************
