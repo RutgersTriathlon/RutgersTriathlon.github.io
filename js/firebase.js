@@ -63,8 +63,8 @@ function retrieveAndPopulateOfficerDataForOfficersPage(){
             officerPosition = snapshotinner.val().Position;
             officerAboutMe = snapshotinner.val().AboutMe;
             officerProfileImageLink = snapshotinner.val().ProfileImage;
+            officerListData = officerListData.concat(createOfficerLayout(officer,officerPosition,officerProfileImageLink,officerAboutMe));
         });
-        officerListData = officerListData.concat(createOfficerLayout(officer,officerPosition,officerProfileImageLink,officerAboutMe));
        }
        console.log("OfficerData " + officerListData);
        return officerListData;
