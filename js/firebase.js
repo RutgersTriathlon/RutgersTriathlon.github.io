@@ -75,7 +75,7 @@ function createOfficerLayout(officerName, officerPosition, officerProfileImageLi
                     cardHeadingPrefix ="<div class=\"panel-heading\">", cardHeadingPostfix = "</div>",
                     officerNameAndPositionPrefix = "<h3>", officerNameAndPositionPostfix = "</h3>",
                     officerBodyInformationPrefix = "<div class=\"panel-body\"> <div class=\"media\">", officerBodyInformationPostfix = "</div></div>",
-                    officerProfileImagePrefix = "<div class=\"media-left\"><img class=\"media-object\ member-image" src=\"",officerProfileImagePostfix = "\"/></div>",
+                    officerProfileImagePrefix = "<div class=\"media-left\"><img class=\"media-object member-image\" src=\"",officerProfileImagePostfix = "\"/></div>",
                     officerVariousInformationPrefix = "<div class=\"media-body\">", officerVariousInformationPostfix = "</div>";
 
     return cardPrefix.concat(cardHeadingPrefix,officerNameAndPositionPrefix,officerName," - ",officerPosition,officerNameAndPositionPostfix,cardHeadingPostfix,
