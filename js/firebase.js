@@ -44,6 +44,54 @@ function retrieveAndPopulateOfficerData(){
     }
 }
 
+function retrieveAndPopulateOfficerDataForOfficersPage(){
+     /** VAR Initialization **/
+    var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
+    var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Officers");
+
+      /** VAR collection and view population from firebase **/
+    firebaseReference.on("value", function(snapshot) {
+        officerData = snapshot.val();
+        document.getElementById("OfficerPageList").innerHTML = concatinateOfficerList(officerData);
+    });
+
+    function concatinateOfficerList(officerData){
+        var officerListForDisplay = "", officerAboutMe = "" , officerProfileImageLink = "",officerListData = "";
+       for(officer in officerData){
+        var officerInformation = new Firebase('https://rutgerstriteam.firebaseio.com/Officers/'+officer);
+        officerInformation.on('value', function(snapshotinner) {
+            officerPosition = snapshotinner.val().Position;
+            officerAboutMe = snapshotinner.val().AboutMe;
+            officerProfileImageLink = snapshotinner.val().ProfileImage;
+        });
+        officerListData.concat(createOfficerLayout(officer,officerPosition,officerProfileImageLink,officerAboutMe));
+       }
+       console.log("OfficerData " + officerListData);
+       return officerListData;
+    }
+}
+
+function createOfficerLayout(officerName, officerPosition, officerProfileImageLink,officerAboutMe){
+    var cardPrefix = "<div class=\"panel panel-default\">", cardPostfix = "</div>",
+        titlePrefix = "<div class=\"panel-heading\">",titlePostfix="</div>",
+        informationPrefix = " <div class=\"panel-body\">", informationPostfix = "</div>"
+        titleAndGraduationPrefix = "<b>",titleAndGraduationPostfix="</b>",titleGraduationDash= " - ",
+        photoPrefix = "<img src=\"", photoPostfix = "\"  class=\"img-responsive img-rounded member-image pull-left\">",
+        bioPrefix = "<p>", bioPostfix = "</p>",
+        rowPrefix="<div class=\"row\">",rowPostfix="</div>",
+        colPrefix="<div class=\"col-md-6 col-md-offset-3\">",colPostfix="</div>",
+        majorPrefix = "",majorPostfix = "";
+
+    var officerDataForDisplay = cardPrefix.concat(rowPrefix,colPrefix,
+                                                titlePrefix,officerName,titleGraduationDash,officerPosition,titlePostfix,
+                                                rowPostfix,rowPrefix,
+                                                photoPrefix,officerProfileImageLink,photoPostfix,
+                                                rowPostfix,rowPrefix,
+                                                bioPrefix,officerAboutMe,bioPostfix,rowPostfix,colPostfix,cardPostfix);
+
+    return officerDataForDisplay;
+}
+
 function retrieveAndPopulateRaceData(){
      /** VAR Initialization **/
     var listItemPrefix = "<li class=\"list-group-item\">",listItemPostFix="</li>"
@@ -82,7 +130,6 @@ function retrieveAndPopulateMemberData(){
 function createMemberClassData(memberClassData){
     
     var returnedClassMemberData = "";
-    console.log("createClassData " + memberClassData);
 
     for(classData in memberClassData){
         returnedClassMemberData = returnedClassMemberData.concat(createMemberClass(classData));
@@ -102,10 +149,12 @@ function createMemberClass(memberClass){
 
 function clearNavBarClasses(){
     var joinNavBarItem = document.getElementById("joinNavBarItem");
-    var membersNavBarItem = document.getElementById("membersNavBarItem");
+    // var membersNavBarItem = document.getElementById("membersNavBarItem");
+    var officersNavBarItem = document.getElementById("officersNavBarItem");
     var aboutNavBarItem = document.getElementById("aboutNavBarItem");
     joinNavBarItem.className = "";
-    membersNavBarItem.className = "";
+    // membersNavBarItem.className = "";
+    officersNavBarItem.className = "";
     aboutNavBarItem.className = "";
 }
 
@@ -114,6 +163,13 @@ function updateNavbarToMembersPage(){
     clearNavBarClasses();
 
     membersNavBarItem.className = "active";
+}
+
+function updateNavbarToOfficersPage(){
+    var officersNavBarItem = document.getElementById("officersNavBarItem");
+    clearNavBarClasses();
+
+    officersNavBarItem.className = "active";
 }
 
 function updateNavbarToJoinPage(){
