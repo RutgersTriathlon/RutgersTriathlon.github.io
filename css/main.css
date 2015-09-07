@@ -42,6 +42,17 @@ h1 {
 }
 
 /************
+  CAROUSEL
+************/
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+
+/************
     PARALLAX
 *************/
 .divider {
@@ -59,7 +70,7 @@ section {
 	background: url('/img/placeholder.png') no-repeat center center fixed;
     color:#fff;
     background-size:cover;
-}  
+}
 
 #footer {
     height: 60px;
