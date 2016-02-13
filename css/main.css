@@ -195,6 +195,17 @@ section {
   font-size:40px;
 }
 
+.joincontent
+{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.joincontent h1
+{
+  font-size:60px;
+}
+
 .panel-body
 {
   display: flex;
