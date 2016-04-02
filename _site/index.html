@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Home - Rutgers Triathlon Team</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="img/triathlonLogo.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-ct-black navbar-transparent" role="navigation">
+  <!-- <div class="container-fluid"> -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/triathlonLogo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-inverse navbar-right">
+        <!-- <li id="homeNavBarItem" class="active"><a href="/index.html">Home<span class="sr-only">(current)</span></a></li> -->
+        <li id="joinNavBarItem"><a href="join.html">Join</a></li>
+        <!-- <li id="sponsorsNavBarItem"><a href="/sponsors.html">Sponsors</a></li> -->
+        <!-- <li id="membersNavBarItem"><a href="members.html">Members</a></li> -->
+        <li id="officersNavBarItem"><a href="officers.html">Officers</a></li>
+        <!-- <li id="newsNavBarItem"><a href="news.html">News</a></li> -->
+        <!-- <li id="contactNavBarItem"><a href="/contact.html">Contact</a></li> -->
+        <li id="aboutNavBarItem"><a href="about.html">About Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  <!-- </div>/.navbar-fluid -->
+</nav>
+
+    <section class="bg-1 text-center">
+	<h1><span class="red-font">Rutgers</span> Triathlon</h1>
+	<p class="lead">Swim <span class="red-font">Bike</span> Run</p>
+	    <div id="photoCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#photoCarousel" data-slide-to="1"></li>
+            <li data-target="#photoCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/img/cover2.jpg" alt="First Slide">
+            </div>
+            <div class="item">
+                <img src="/img/cover.jpg" alt="Second Slide">
+            </div>
+            <div class="item">
+                <img src="/img/cover3.jpg" alt="Third Slide">
+            </div>
+            <div class="item">
+                <img src="/img/cover4.jpg" alt="Third Slide">
+            </div>
+            <div class="item">
+                <img src="/img/cover5.jpg" alt="Third Slide">
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#photoCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#photoCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</section>
+    <div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3>Summer Practice Schedule</h3></div>
+        <div class="panel-body">
+          <ul class="list-group" id="PracticeList"/>
+        </div><!-- panelBody -->
+      </div><!-- panel -->
+    </div><!-- col -->
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading"><h3 class="center-text">Upcoming Races</h3></div>
+        <div class="panel-body">
+          <ul class="list-group" id="RaceList"/>
+        </div><!-- panelBody -->
+      </div><!-- panel -->
+    </div><!-- col -->
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3>Officers</h3></div>
+        <div class="panel-body">
+          <ul class="list-group" id="OfficerList"/>
+        </div><!-- panelBody -->
+      </div><!-- panel -->
+    </div><!-- col -->
+  </div><!--/row-->
+  <hr>
+</div><!--/container-->
+
+  </body>
+
+  <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+   retrieveAndPopulatePracticeData();
+   retrieveAndPopulateOfficerData();
+   retrieveAndPopulateRaceData();
+  </script>
+</html>
