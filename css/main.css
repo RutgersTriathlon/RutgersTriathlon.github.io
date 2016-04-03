@@ -61,7 +61,7 @@ section {
 }
 
 .bg-1 {
-	background: url('../img/placeholder.png') no-repeat center center fixed;
+	  background-color: #282426;
     color:#fff;
     background-size:cover;
 }
