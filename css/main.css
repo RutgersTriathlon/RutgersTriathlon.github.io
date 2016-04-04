@@ -212,3 +212,22 @@ section {
   align-items:center;
   justify-content:center;
 }
+
+@media(max-width:768px)
+{
+  .active > a
+  {
+    border:2px solid #cc0033
+  }
+
+  .li > a
+  {
+    border:2px solid white
+  }
+
+  .navbar
+  {
+    border-bottom:1px solid #cc0033;
+    border-radius:0px;
+  }
+}
