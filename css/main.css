@@ -180,7 +180,9 @@ section {
 .navbar-nav li a:hover, .current-page {
   box-shadow: inset 0px 5px 0px 0px;
 }
-
+/*
+About page
+*/
 .aboutcontent
 {
   margin-left: 20%;
@@ -189,11 +191,97 @@ section {
 
 .aboutcontent h1
 {
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
+  font-size:60px;
+  border-bottom: 2px solid #cc0033;
 }
+
+.aboutcontent p
+{
+    font-size:20px;
+}
+
+.aboutcontent .imgwrap
+{
+  position:relative;
+}
+
+.aboutcontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.aboutcontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.aboutcontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}
+
+/*
+Officer Page
+*/
+
+.officercontent
+{
+  margin-left:20%;
+  margin-right:20%;
+}
+
+.officercontent h1
+{
+  font-size:60px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.officercontent p
+{
+    font-size:20px;
+}
+
+.officercontent .imgwrap
+{
+  position:relative;
+}
+
+.officercontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.officercontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.officercontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}
+
+/*
+Join Page
+*/
 
 .joincontent
 {
@@ -201,9 +289,44 @@ section {
   margin-right: 20%;
 }
 
+.joincontent p
+{
+    font-size:20px;
+}
+
 .joincontent h1
 {
   font-size:60px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.joincontent .imgwrap
+{
+  position:relative;
+}
+
+.joincontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.joincontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.joincontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
 }
 
 .panel-body
@@ -211,4 +334,39 @@ section {
   display: flex;
   align-items:center;
   justify-content:center;
+}
+
+.panel-body img
+{
+  max-width:100%
+}
+
+@media(max-width:768px)
+{
+  .active > a
+  {
+    border:2px solid #cc0033
+  }
+
+  .li > a
+  {
+    border:2px solid white
+  }
+
+  .navbar
+  {
+    border-bottom:1px solid #cc0033;
+    border-radius:0px;
+  }
+
+  .joincontent
+  {
+    margin-left:5%;
+    margin-right:5%;
+  }
+  .aboutcontent
+  {
+    margin-left:5%;
+    margin-right:5%;
+  }
 }
