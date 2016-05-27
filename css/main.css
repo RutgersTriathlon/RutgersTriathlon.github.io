@@ -67,15 +67,26 @@ section {
 }
 
 #footer {
-    height: 60px;
-    background-color:#585858;
+    height: 50px;
+    background-color:#cc0033;
     margin-top:50px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:0px;
+    padding-bottom:0px;
 }
 
-#footer a {
-  color:#efefef;
+.copyright
+{
+    float: left;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:10px;
+    color:#fff;
+}
+
+.social
+{
+    float: right;
+    margin: 0px;
 }
 
 #bannerText {
