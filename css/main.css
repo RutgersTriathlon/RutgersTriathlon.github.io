@@ -67,15 +67,26 @@ section {
 }
 
 #footer {
-    height: 60px;
-    background-color:#585858;
+    height: 50px;
+    background-color:#cc0033;
     margin-top:50px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:0px;
+    padding-bottom:0px;
 }
 
-#footer a {
-  color:#efefef;
+.copyright
+{
+    float: left;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:10px;
+    color:#fff;
+}
+
+.social
+{
+    float: right;
+    margin: 0px;
 }
 
 #bannerText {
@@ -237,6 +248,7 @@ Officer Page
 {
   margin-left:20%;
   margin-right:20%;
+  overflow:auto;
 }
 
 .officercontent h1
@@ -245,9 +257,15 @@ Officer Page
   border-bottom: 2px solid #cc0033;
 }
 
+.officercontent .panel-heading p
+{
+    font-size:25px;
+    text-align:center;
+}
+
 .officercontent p
 {
-    font-size:20px;
+  font-size:20px;
 }
 
 .officercontent .imgwrap
@@ -279,6 +297,26 @@ Officer Page
     text-align:center;
 }
 
+.officercontent .col-md-6
+{
+  padding:0px;
+  overflow:auto;
+}
+
+.officercontent .panel
+{
+  height:1100px;
+}
+
+.officercontent .right
+{
+  margin-left:5px;
+}
+
+.officercontent .left
+{
+  margin-right:5px;
+}
 /*
 Join Page
 */
