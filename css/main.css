@@ -179,6 +179,12 @@ section {
   transition: .1s ease-in-out;
 }
 
+.dropdown-menu>li>a:hover
+{
+  background-color:#cc0033;
+  background-image:none;
+}
+
 .navbar-nav > li{
   padding-left:30px;
   padding-right:15px;
