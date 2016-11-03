@@ -178,6 +178,27 @@ function updateNavbarToAboutPage(){
     aboutNavBarItem.className = "active";
 }
 
+function updateNavbarToPracPage(){
+    var pracschedNavBarItem = document.getElementById("pracschedNavBarItem");
+    clearNavBarClasses();
+
+    pracschedNavBarItem.className = "active";
+}
+
+function updateNavbarToRacePage(){
+    var raceNavBarItem = document.getElementById("raceschedNavBarItem");
+    clearNavBarClasses();
+
+    raceNavBarItem.className = "active";
+}
+
+function updateNavbarToResultsPage(){
+    var resultsNavBarItem = document.getElementById("resultsNavBarItem");
+    clearNavBarClasses();
+
+    resultsNavBarItem.className = "active";
+}
+
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
     var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",
