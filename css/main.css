@@ -432,6 +432,17 @@ Join Page
     text-align:center;
 }
 
+.quickinfo
+{
+  font-size:30px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.racecontent .quickinfo
+{
+  font-size:25px;
+}
+
 .panel-body
 {
   display: flex;
@@ -453,6 +464,13 @@ Join Page
 .newsAndWidg p
 {
   font-size:25px;
+}
+
+.imgwrapper img
+{
+  margin-left:10%;
+  margin-right:10%;
+  position: relative;
 }
 
 @media(max-width:768px)
