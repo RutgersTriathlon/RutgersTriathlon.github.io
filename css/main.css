@@ -67,15 +67,26 @@ section {
 }
 
 #footer {
-    height: 60px;
-    background-color:#585858;
+    height: 50px;
+    background-color:#cc0033;
     margin-top:50px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:0px;
+    padding-bottom:0px;
 }
 
-#footer a {
-  color:#efefef;
+.copyright
+{
+    float: left;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:10px;
+    color:#fff;
+}
+
+.social
+{
+    float: right;
+    margin: 0px;
 }
 
 #bannerText {
@@ -180,7 +191,9 @@ section {
 .navbar-nav li a:hover, .current-page {
   box-shadow: inset 0px 5px 0px 0px;
 }
-
+/*
+About page
+*/
 .aboutcontent
 {
   margin-left: 20%;
@@ -189,11 +202,124 @@ section {
 
 .aboutcontent h1
 {
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
+  font-size:60px;
+  border-bottom: 2px solid #cc0033;
 }
+
+.aboutcontent p
+{
+    font-size:20px;
+}
+
+.aboutcontent .imgwrap
+{
+  position:relative;
+}
+
+.aboutcontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.aboutcontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.aboutcontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}
+
+/*
+Officer Page
+*/
+
+.officercontent
+{
+  margin-left:20%;
+  margin-right:20%;
+  overflow:auto;
+}
+
+.officercontent h1
+{
+  font-size:60px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.officercontent .panel-heading p
+{
+    font-size:25px;
+    text-align:center;
+}
+
+.officercontent p
+{
+  font-size:20px;
+}
+
+.officercontent .imgwrap
+{
+  position:relative;
+}
+
+.officercontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.officercontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.officercontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}
+
+.officercontent .col-md-6
+{
+  padding:0px;
+  overflow:auto;
+}
+
+.officercontent .panel
+{
+  height:1200px;
+}
+
+.officercontent .right
+{
+  margin-left:5px;
+}
+
+.officercontent .left
+{
+  margin-right:5px;
+}
+/*
+Join Page
+*/
 
 .joincontent
 {
@@ -201,9 +327,44 @@ section {
   margin-right: 20%;
 }
 
+.joincontent p
+{
+    font-size:20px;
+}
+
 .joincontent h1
 {
   font-size:60px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.joincontent .imgwrap
+{
+  position:relative;
+}
+
+.joincontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.joincontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.joincontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
 }
 
 .panel-body
@@ -211,6 +372,11 @@ section {
   display: flex;
   align-items:center;
   justify-content:center;
+}
+
+.panel-body img
+{
+  max-width:100%
 }
 
 @media(max-width:768px)
@@ -229,5 +395,16 @@ section {
   {
     border-bottom:1px solid #cc0033;
     border-radius:0px;
+  }
+
+  .joincontent
+  {
+    margin-left:5%;
+    margin-right:5%;
+  }
+  .aboutcontent
+  {
+    margin-left:5%;
+    margin-right:5%;
   }
 }
