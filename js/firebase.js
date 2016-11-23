@@ -16,7 +16,7 @@ function retrieveAndPopulatePracticeData(){
         listItemPrefix,"<b>Thursday: </b>",practiceData.Thursday,listItemPostFix,
         listItemPrefix,"<b>Friday: </b>",practiceData.Friday,listItemPostFix,
         listItemPrefix,"<b>Saturday: </b>",practiceData.Saturday,listItemPostFix,
-    	listItemPrefix,"<b>Sunday: </b>",practiceData.Sunday,listItemPostFix);          
+    	listItemPrefix,"<b>Sunday: </b>",practiceData.Sunday,listItemPostFix);
     }
 }
 
@@ -109,7 +109,7 @@ function retrieveAndPopulateRaceData(){
     }
 }
 
-function retrieveAndPopulateMemberData(){  
+function retrieveAndPopulateMemberData(){
     var firebaseReference = new Firebase("https://rutgerstriteam.firebaseio.com/Members");
 
     /** VAR collection and view population from firebase **/
@@ -120,7 +120,7 @@ function retrieveAndPopulateMemberData(){
 }
 
 function createMemberClassData(memberClassData){
-    
+
     var returnedClassMemberData = "";
 
     for(classData in memberClassData){
@@ -176,6 +176,27 @@ function updateNavbarToAboutPage(){
     clearNavBarClasses();
 
     aboutNavBarItem.className = "active";
+}
+
+function updateNavbarToPracPage(){
+    var pracschedNavBarItem = document.getElementById("pracschedNavBarItem");
+    clearNavBarClasses();
+
+    pracschedNavBarItem.className = "active";
+}
+
+function updateNavbarToRacePage(){
+    var raceNavBarItem = document.getElementById("raceschedNavBarItem");
+    clearNavBarClasses();
+
+    raceNavBarItem.className = "active";
+}
+
+function updateNavbarToResultsPage(){
+    var resultsNavBarItem = document.getElementById("resultsNavBarItem");
+    clearNavBarClasses();
+
+    resultsNavBarItem.className = "active";
 }
 
 function concatinateMemberList(memberData){
