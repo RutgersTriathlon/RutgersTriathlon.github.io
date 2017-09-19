@@ -199,6 +199,13 @@ function updateNavbarToResultsPage(){
     resultsNavBarItem.className = "active";
 }
 
+function updateNavbarToSponsorPage(){
+    var sponsorNavBarItem = document.getElementById("sponsorNavBarItem");
+    clearNavBarClasses();
+
+    sponsorNavBarItem.className = "active";
+}
+
 function concatinateMemberList(memberData){
     var memberInformationForDisplay = "";
     var memberCardPrefix = "<div class=\"panel panel-default\">", memberCardPostfix = "</div>",

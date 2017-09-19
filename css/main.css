@@ -440,6 +440,57 @@ Join Page
   font-size:25px;
 }
 
+/*
+Sponsor Content
+*/
+
+.sponsorcontent
+{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.sponsorcontent p
+{
+    font-size:20px;
+}
+
+.sponsorcontent h1
+{
+  font-size:60px;
+  border-bottom: 2px solid #cc0033;
+}
+
+.sponsorcontent .imgwrap
+{
+  position:relative;
+}
+
+.sponsorcontent img
+{
+  width:100%;
+  position:relative;
+}
+
+.sponsorcontent .description
+{
+    position:absolute; /* absolute position (so we can position it where we want)*/
+    font-size:15px;
+    color:black;
+    opacity:0.8; /* transparency */
+    filter:alpha(opacity=60); /* IE transparency */
+    background: white;
+    bottom:0px;
+    width:100%;
+}
+.sponsorcontent .description_content
+{
+    padding:10px;
+    margin:0px;
+    text-align:center;
+}
+
+
 .panel-body
 {
   display: flex;
