@@ -23,6 +23,13 @@ function updateNavbarToOfficersPage(){
     officersNavBarItem.className = "active";
 }
 
+function updateNavbarToIndoorPage(){
+    var indoortriNavBarItem = document.getElementById("indoortriNavBarItem");
+    clearNavBarClasses();
+
+    indoortriNavBarItem.className = "active";
+}
+
 function updateNavbarToJoinPage(){
     var joinNavBarItem = document.getElementById("joinNavBarItem");
     clearNavBarClasses();
@@ -77,4 +84,11 @@ function updateNavbarToFAQsPage(){
     clearNavBarClasses();
 
     faqsNavBarItem.className = "active";
+}
+
+function updateNavbarToswimresoPage(){
+    var swimresoNavBarItem = document.getElementById("swimresoNavBarItem");
+    clearNavBarClasses();
+
+    swimresoNavBarItem.className = "active";
 }
