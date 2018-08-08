@@ -92,3 +92,10 @@ function updateNavbarToswimresoPage(){
 
     swimresoNavBarItem.className = "active";
 }
+
+function updateNavbarTobikeresoPage(){
+    var bikeresoNavBarItem = document.getElementById("bikeresoNavBarItem");
+    clearNavBarClasses();
+
+    bikeresoNavBarItem.className = "active";
+}
