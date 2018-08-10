@@ -99,3 +99,10 @@ function updateNavbarTobikeresoPage(){
 
     bikeresoNavBarItem.className = "active";
 }
+
+function updateNavbarTorunresoPage(){
+    var runresoNavBarItem = document.getElementById("runresoNavBarItem");
+    clearNavBarClasses();
+
+    runresoNavBarItem.className = "active";
+}
