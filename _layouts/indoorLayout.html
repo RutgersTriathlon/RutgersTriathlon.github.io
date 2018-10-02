@@ -43,12 +43,29 @@
       delay: 200,
       duration: 2000,
       origin: 'left',
-      distance: '600px'
+      distance: '600px',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)'
     });
     sr.reveal('.indoorInfo1', {
       duration: 2000,
       origin: 'left',
       distance: '600px'
+    });
+    sr.reveal('.pop-in', {
+      duration: 3000,
+      scale: 0.5
+    });
+    sr.reveal('.come-in', {
+      duration: 3500,
+      opacity: 0
+    });
+    sr.reveal('.rotate2017', {
+      duration: 2000,
+      rotate: {x: 600, y: 400, z: 200}
+    });
+    sr.reveal('.rotate2016', {
+      duration: 2000,
+      rotate: {x: -1200, y: -800, z: -700}
     });
   </script>
 </html>
