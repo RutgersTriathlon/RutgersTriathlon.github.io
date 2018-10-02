@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -29,5 +30,42 @@
   <script src="js/dropdownonhover.js"></script>
   <script type="text/javascript">
    updateNavbarToIndoorPage();
+  </script>
+
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('.banner-middle', {
+      duration: 2000,
+      origin: 'right',
+      distance: '500px'
+    });
+    sr.reveal('.banner-top', {
+      delay: 200,
+      duration: 2000,
+      origin: 'left',
+      distance: '600px',
+      easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)'
+    });
+    sr.reveal('.indoorInfo1', {
+      duration: 2000,
+      origin: 'left',
+      distance: '600px'
+    });
+    sr.reveal('.pop-in', {
+      duration: 3000,
+      scale: 0.5
+    });
+    sr.reveal('.come-in', {
+      duration: 3500,
+      opacity: 0
+    });
+    sr.reveal('.rotate2017', {
+      duration: 2000,
+      rotate: {x: 600, y: 400, z: 200}
+    });
+    sr.reveal('.rotate2016', {
+      duration: 2000,
+      rotate: {x: -1200, y: -800, z: -700}
+    });
   </script>
 </html>
