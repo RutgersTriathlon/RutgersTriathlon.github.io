@@ -410,10 +410,19 @@ Join Page
   position:relative;
 }
 
-.racecontent img
-{
+.racecontent img {
   width:100%;
   position:relative;
+}
+
+.racecontent ul {
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  list-style-position: inside;
+  font-size: 18px;
+  float: none;
+  position: sticky;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
 }
 
 .racecontent .description
