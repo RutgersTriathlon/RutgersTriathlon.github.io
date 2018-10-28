@@ -1,4 +1,89 @@
----
-layout: joinLayout
-title: Rutgers Triathlon Join Page
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Join - Rutgers Triathlon Team</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="img/triathlonLogo.png">
+  </head>
+  <body>
+
+<!-- Nav Bar -->
+    <div id="nav-placeholder">NavBar</div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("needs/navbar.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+<!-- End Nav Bar -->
+
+<!-- Join Content -->
+    <div class="container-fluid top-buffer" id="joinContainer">
+    	<div class ="joincontent">
+      <h1>How to Join</h1>
+    	<div class ="imgwrap">
+    		<img src ="img/rutgersTriathlonCap.jpg">
+    		<div class='description'>
+    		<!-- description content -->
+    		<!-- end description content -->
+    		</div>
+    	</div>
+    </br></br>
+    	<p>Interested in joining the team? Great!
+    	</br></br>
+    	<p>First, here's a few things you get with team membership:</p>
+    	<ul>
+    		<li><p>Compete as an official member of the Rutgers Triathlon Team</p></li>
+    		<li><p>Organized workouts with dedicated training plans for all skill levels</p></li>
+    		<li><p>Discounts! Our sponsors generously give discounts for our members and some Race Fees and Travel Expenses are reduced.</p></li>
+    		<li><p>Fun! Even though we are competitive, we always try to keep it fun.</p></li>
+    	</ul>
+      </br>
+    	<p>
+    	At the beginning of each semester we typically have a two week trial period where anyone can come to practice to checkout how the workouts go and how cool we are. Once the trial period is done, we ask you to pay dues and join our roster so that you will be an official member of the Rutgers Triathlon Team.
+    	</p>
+
+    	<p>Once you're ready to jump in, just follow these few short steps:</p>
+    	<ul>
+    		<li><p>Join our <a href="https://www.facebook.com/groups/274413140871/">Facebook page</a>! Once you request to join, an officer will approve it shortly and you'll be added to the group. The facebook group is the main form of contact used for the team. This is where we make announcements, time changes to workouts, etc.</p></li>
+    		<li><p>Pay dues! Dues are announced at the beginning of each semester at the first General Meeting. Cash or checks accepted. Please make checks out to Rutgers Triathlon Team</p></li>
+    		<li><p>Register on the Rutgers Recreation <a href="http://recreation.rutgers.edu/sports/sport-clubs/registration/">Club Sports page</a> There is a form that needs to be filled out by every team member and has some basic information required by Rutgers University.</p></li>
+    		<li><p>Finally, what you've been waiting for... Come to <a href="http://rutgerstriathlon.com/index.html">Practice!</a></h2></li>
+    	</ul></br>
+    	<p>Questions? Email us at : <a href="mailto:rutgerstriteam@gmail.com">  rutgerstriteam@gmail.com</a></p>
+
+    </div>
+    </div>
+<!-- End Join Content -->
+  </body>
+
+<!-- Footer -->
+  <div id="nav-placeholder">NavBar</div>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script>
+      $.get("needs/footer.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+      });
+  </script>
+<!-- End Footer -->
+
+  <!-- <script src="js/jquery-2.1.3.min.js"/> -->
+  <!---->
+  <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/dropdownonhover.js"></script>
+  <script type="text/javascript">
+   updateNavbarToJoinPage();
+  </script>
+</html>

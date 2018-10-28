@@ -1,4 +1,105 @@
----
-layout: swimLayout
-title: Rutgers Triathlon Swim Resources
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Swim Resources - Rutgers Triathlon Team</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="img/triathlonLogo.png">
+  </head>
+  <body>
+
+<!-- Nav Bar -->
+    <div id="nav-placeholder">NavBar</div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("needs/navbar.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+<!-- End Nav Bar -->
+
+<!-- Swim Content -->
+    <div class="container-fluid top-buffer" id="aboutContainer">
+    <div class ="aboutcontent">
+      <h1>Swim Resources</h1>
+    	<div class ="imgwrap">
+    		<img src ="img/swimreso.png">
+    		<div class='description'>
+    		<!-- description content -->
+    			<p class='description_content'>Rutgers Triathlon Swimming at Werblin!</p>
+    		<!-- end description content -->
+    		</div>
+    	</div>
+
+    	</br>
+    	</br>
+    	<p>Our swim practices take place at the <a href ="https://goo.gl/maps/f5CvLcgoWD22">Cook/Douglass Recreation Center.</a> If you need a ride, posting on the FB page is your best bet.</p>
+      <p>If you're new to swimming, the following is a list of things to bring to practice along with some optional items.</p>
+
+      <h3><b>Required items</b></h3>
+      <ul>
+        <li><p><b>Swimsuit</b> - Any suit designed for lap swimming, generally with minimal drag</p></li>
+        <li><p><b>Towel</b> - You need to dry off somehow</p></li>
+        <li><p><b>Goggles</b> - Marvelous device that helps you see underwater and stare at the lap line.</p></li>
+        <li><p><b>Water bottle</b> - Helps you stay hydrated during the hard sets, don't drink the pool water.</p></li>
+      </ul>
+    </br>
+      <h3><b>Optional Items</b></h3>
+      <ul>
+        <li><p><b>Swim Cap</b> - Helps reduce drag, minimizes contact between your hair and chlorine, keeps hair out of your face and makes you look super cool.</p></li>
+        <li><p><b>Swim Buoy</b> - These are used for pulling drills and are available for our use at the pool.</p></li>
+        <li><p><b>Kickboard</b> - Used for kicking drills / sets and are available for our use at the pool.</p></li>
+        <li><p><b>Fins</b> - We recommend using shorter fins as opposed to diving fins. These are great for drills and can help improve ankle flexibility for kicking.</p></li>
+        <li><p><b>Paddles</b> - Can be used for pulling drills or pull strengthening.</p></li>
+        <li><p><b>Watch</b> - Useful for keeping track of splits, distance, etc.</p></li>
+        <li><p><b>Waterproof Sandals</b> - Protect your feet from the wet floor / keep day shoes dry.</p></li>
+        <li><p><b>Lock</b> - Useful for the lockers at any gym. Front desk will have some, but they do run out. Keep your valuables safe!</p></li>
+        <li><p><b>Wetsuit</b> - Keeps you warm in the cold Atlantic ocean and helps you float to boot. Swim once in a pool before race day!</p></li>
+      </ul>
+    </br>
+      <h3><b>Additional Sources</b></h3>
+      <ul>
+          <li><p><a href ="https://www.mytimetotri.com/training/swim/swim-specific-gear">Swim-Specific Gear from USAT's Time to Tri Iniiative</a></p></li>
+          <li><p><a href ="https://www.mytimetotri.com/training/swim/increase-your-open-water-comfort-level">Increase your Open Water Comfort Level</a></p></li>
+          <li><p><a href ="https://www.youtube.com/watch?v=YVLBTAaZsBE">Swimming for Triathlon</a></p></li>
+          <li><p><a href = "https://www.youtube.com/watch?v=-6r3M4GGgIY">How to Sight in Open Water</a></p></li>
+          <li><p><a href ="https://www.youtube.com/watch?v=5HLW2AI1Ink">Freestyle Swimming Technique</a></p></li>
+          <li><p><a href ="https://www.amazon.com/gp/product/1934030759/">Swim Workouts for Triathletes (Workouts in a Binder)</a></p></li>
+      </ul>
+    	</br>
+    </div>
+    </div>
+<!-- End Swim Content -->
+
+  </body>
+
+<!-- Footer -->
+  <div id="nav-placeholder">NavBar</div>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script>
+      $.get("needs/footer.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+      });
+  </script>
+<!-- End Footer -->
+
+  <!-- <script src="js/jquery-2.1.3.min.js"/> -->
+  <!---->
+  <script src="https://cdn.firebase.com/js/client/2.2.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/dropdownonhover.js"></script>
+  <script type="text/javascript">
+   updateNavbarToswimresoPage();
+   updateNavbarToResourcesPage();
+  </script>
+</html>
