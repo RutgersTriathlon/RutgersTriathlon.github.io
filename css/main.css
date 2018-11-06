@@ -194,9 +194,29 @@ section {
 .navbar-nav li a:hover, .current-page {
   box-shadow: inset 0px 5px 0px 0px;
 }
-/*
+
+/***********
+Gallery Presets
+***********/
+
+.gallery {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.gallery > h1 {
+  padding-top: 5%;
+  padding-bottom: 7%;
+  text-align: center;
+  font-size: 500%;
+  border-bottom: 8px solid #cc0033;
+  border-top: 4px solid #cc0033;
+}
+
+/***********
 About page
-*/
+***********/
+
 .aboutcontent
 {
   margin-left: 20%;
