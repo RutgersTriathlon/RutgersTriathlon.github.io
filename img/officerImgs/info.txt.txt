@@ -1,0 +1,2 @@
+Image resolution for Officer Pictures are 1000 px by 1333 px
+Aspect Ratio: 0.7501875469
